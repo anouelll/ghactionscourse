@@ -2,7 +2,7 @@ function greet(name){
     return `Helloo, ${name}!`
 }
 
-module.exports = greet
+export default greet
 if(require.main === module){
     console.log(greet("World"))
 }

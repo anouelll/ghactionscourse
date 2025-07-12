@@ -1,14 +1,14 @@
 on: 
   push:
     branches:
-      - master
+      - main
       - "release/**"
     paths:
       - "src/**"  # <--- espace ajouté ici
 
   pull_request:
     branches:
-      - master
+      - main
       - "release/**"
 
 jobs:
