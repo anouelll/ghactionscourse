@@ -1,21 +1,22 @@
 on: 
-    push:
-        branches:
-            - master
-            - "release/**"
-        paths:
-            -"src/**"
+  push:
+    branches:
+      - master
+      - "release/**"
+    paths:
+      - "src/**"  # <--- espace ajouté ici
 
-    pull_request:
-        branches:
-            - master
-            - "release/**"
+  pull_request:
+    branches:
+      - master
+      - "release/**"
+
 jobs:
-    test:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v4.2.2
-            
-            - name: Run Tests
-              run: npm test
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+      
+      - name: Run Tests
+        run: npm test
